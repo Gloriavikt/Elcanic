@@ -1,0 +1,9 @@
+body{
+    background-image: url(bgFender.PNG);
+    
+}
+button{
+    font-size: 40px;
+    float: right;
+    background-color: orange;
+}

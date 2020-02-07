@@ -1,0 +1,22 @@
+<!doctype HTML>
+<script>
+//popup window
+        function basicPopup(url) {
+            popupWindow =        
+            window.open(url, 'popupwindow', 'height=500,width=500,left=100,top=100,resizalbe,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes')
+        }
+
+</script>
+<head>
+<title>Popup-opening-website</title>
+</head>
+<body>
+    <h1>A list of popups</h1>
+    <a href="https://www.facebook.com/" onclick="basicPopup(this.href);return false">Facebook</a>
+    <br>
+    <a href="https://www.youtube.com/" onclick="basicPopup(this.href);return false">YouTube</a>
+    <br>
+    <a href="https://www.google.com/" onclick="basicPopup(this.href);return false">Google</a>
+    <br>
+    <a href="https://www.reddit.com/" onclick="basicPopup(this.href);return false">Reddit</a>
+</body>
