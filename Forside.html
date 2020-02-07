@@ -11,8 +11,16 @@ function knap() {
 }
 function knappen()	{
 	
- document.getElementById("registrerknap").textContent = "knapper";
+ document.getElementById("Haha").textContent = "knapper";
 	
+}
+function janej(svar) {
+	if (svar === "ja") {
+		alert("Tak for at trykke ja");
+	}
+	else {
+		alert(":(");
+	}
 }
 </script>
 </head>
@@ -23,12 +31,10 @@ function knappen()	{
 	<a href="http://elcanic.dk/">elcanic er sejt</a>
 	<br><p>elcanic er sejt</p>
 	
-	<img src="vsauce.jpg">
 	
-	<button id="bestil her" onclick="knap()">vsauceerdejlig</button>
-	<input >ehrfkjeshf</input>
+	<button id="bestil her" onclick="janej('ja')">ja</button>
 	
-	<button id="registerknap" onclick="knappen()">købknap</button>
+	<button id="registerknap" onclick="janej('nej')">nej</button>
 	 
 </body>
 </html>
