@@ -8,16 +8,15 @@
 var count = -1;
 var liste = ["har du et lignedne produkt i forvejen?", "kommer du til at bruge det dagligt?", "er produktet det værd?"];
 var stop = false;
-function knap(input) {
-	
-	if (input=== "nej") {
-		
+function knap() {
+	var input = document.getElementById("slider").value;
+	if (input<5) {
 		alert("Du har vist ikke brug for dette produkt");
 		stop = true;
 		window.close()
 
 	}
-	if (input=== "ja" && stop===false) {
+	if (input>=5) {
 			count = count + 1;
 	document.getElementById("monner").textContent =  liste[count];
 	
@@ -25,30 +24,28 @@ function knap(input) {
 		alert("du kan købe produktet, men tænk dig om");
 		window.close()
 	}
-		
 	}
+}
+
+function slider(){
+	
+	var værdi = document.getElementById("slider").value;
+	document.getElementById("value").textContent = "Værdi: " + værdi;
+	
 }
 
 
 
-function janej(svar) {
-	if (svar === "ja") {
-		alert("Tak for at trykke ja");
-	}
-	else {
-		alert(":(");
-	}
-}
 </script>
 </head>
 
 <body>
-	<br><p id="monner">Har du brug for dette produkt?</p>
-	
-	
-	<button id="bestil her" onclick="knap('ja')">ja</button>
-	
-	<button id="registerknap" onclick="knap('nej')">nej</button>
+	<p id="monner">Har du brug for dette produkt?</p>
+	<p  id="value">Værdi: 6</p>
+	<p id="delay">Forsinkelse 0</p>
+	<input oninput="slider()" id="slider" type="range" min="1" max="10"></input> <br>
+	<button id="bestil her" onclick="knap()">svar</button>
+
 	 
 </body>
 </html>
