@@ -20,6 +20,11 @@ function knap(input) {
 	if (input=== "ja" && stop===false) {
 			count = count + 1;
 	document.getElementById("monner").textContent =  liste[count];
+	
+	if (count>2){
+		alert("du kan købe produktet, men tænk dig om");
+	}
+		
 	}
 }
 
